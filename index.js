@@ -5,7 +5,7 @@ const ipc = require('electron').ipcRenderer,
 
 let Channel = null;
 
-/*const get = { // ready for other commands that I have laying around but aren't needed until guild support
+const get = { // ready for other commands that I have laying around but aren't needed until guild support
     user: user => {
         user = user.trim();
         if (/^<@!{0,1}\d{16,18}>$/.test(user)) user = user.replace(/^<@!{0,1}|>$/g, '');
@@ -13,7 +13,7 @@ let Channel = null;
         //if "user" is an id, check for id
         //  otherwise if there's a discriminator then check for both the name and discriminator
         //  otherwise check for just the name
-        //      m = each user
+              m = each user
         var mFunc = /^\d{16,18}$/.test(user) ? m => m.id === user : (user.match(/#\d{4}$/) ? m => {
             var reg = new RegExp('^'+user.toLowerCase().replace(/#\d{4}$/, '').replace(/[^a-z0-9]/g, '')+user.match(/#\d{4}$/)[0], 'i');
             return reg.test(m.username.toLowerCase().replace(/[^a-z0-9]/g, '')+'#'+m.discriminator) || reg.test((m.nickname || '').toLowerCase().replace(/[^a-z0-9]/g, '')+'#'+m.discriminator);
@@ -24,7 +24,7 @@ let Channel = null;
             m = client.users.filter(mFunc).array();
         return m && m.length ? m[0] : null;
     }
-};*/
+};
 
 addEventListener('load', () => {
 
