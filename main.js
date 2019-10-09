@@ -1,9 +1,9 @@
 const {app, BrowserWindow, ipcMain} = require('electron'),
       fs = require('fs');
 
-/*const path = require('path'),
+const path = require('path'),
       url = require('url'),
-      net = require('net');*/
+      net = require('net');
 
 let mainWindow;
 
